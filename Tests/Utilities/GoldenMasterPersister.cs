@@ -8,7 +8,7 @@ namespace Tests.Utilities
 {
     internal class GoldenMasterPersister
     {
-        private const string Path = "C:\\Users\\kryza\\Downloads\\trivia-master\\Trivia\\GoldenMaster.txt";
+        private const string Path = "C:\\Users\\kryza\\Documents\\Sources\\YNOV\\trivia-master\\Trivia\\GoldenMaster.txt";
         private const string EndOfBlock = "---END OF BLOCK---";
 
         public async Task PersistAsync(IReadOnlyDictionary<string, string> goldenMaster)

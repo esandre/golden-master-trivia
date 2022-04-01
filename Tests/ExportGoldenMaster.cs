@@ -24,7 +24,7 @@ namespace Tests
                 var output = new StringBuilderOutput();
 
                 var gameRunner = new GameRunner(rng, output);
-                gameRunner.Play();
+                gameRunner.Play("Chet", "Pat", "Sue");
 
                 var input = rng.Logged;
 
@@ -48,9 +48,11 @@ namespace Tests
                 var output = new StringBuilderOutput();
 
                 var gameRunner = new GameRunner(rng, output);
-                gameRunner.Play();
+                gameRunner.Play("Chet", "Pat", "Sue");
 
-                Assert.Equal(expectedOutput, output.ToString());
+                var realOutput = output.ToString();
+
+                Assert.Equal(expectedOutput, realOutput);
             }
         }
     }

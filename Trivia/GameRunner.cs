@@ -1,4 +1,5 @@
-﻿using Trivia.Ports;
+﻿using System.Collections.Generic;
+using Trivia.Ports;
 
 namespace Trivia
 {
@@ -14,14 +15,18 @@ namespace Trivia
             _output = output;
         }
 
-        public void Play()
+        public void Play(params string[] joueurs)
         {
             var aGame = new Game(_output);
+            foreach (var joueur in joueurs)
+                aGame.Add(joueur);
 
-            aGame.Add("Chet");
-            aGame.Add("Pat");
-            aGame.Add("Sue");
-            
+            if(joueurs.Length == 1)
+            {
+                _output.WriteLine("Vous devez avoir au moins 2 joueurs.");
+                return;
+            }
+
             do
             {
                 aGame.Roll(_rng.Next(5) + 1);
