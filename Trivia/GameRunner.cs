@@ -1,5 +1,4 @@
-﻿using Trivia.Implementations;
-using Trivia.Ports;
+﻿using Trivia.Ports;
 
 namespace Trivia
 {

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Trivia.Implementations;
 using Trivia.Ports;
 
 namespace Trivia
@@ -27,7 +26,7 @@ namespace Trivia
         {
             _output = output;
 
-            for (var i = 0; i < 50; i++)
+            for (var i = 0; i < 60; i++)
             {
                 _popQuestions.AddLast("Pop Question " + i);
                 _scienceQuestions.AddLast(("Science Question " + i));
@@ -132,7 +131,7 @@ namespace Trivia
             if (_places[_currentPlayer] == 0) return "Pop";
             if (_places[_currentPlayer] == 4) return "Pop";
             if (_places[_currentPlayer] == 8) return "Pop";
-            if (_places[_currentPlayer] == 1) return "Science";
+            if (_places[_currentPlayer] == 6) return "Science";
             if (_places[_currentPlayer] == 5) return "Science";
             if (_places[_currentPlayer] == 9) return "Science";
             if (_places[_currentPlayer] == 2) return "Sports";
