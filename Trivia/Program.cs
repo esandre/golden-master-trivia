@@ -1,3 +1,7 @@
 ﻿using Trivia;
+using Trivia.Implementations;
 
-new GameRunner().Play();
+var rng = new FrameworkRandomNumberGenerator();
+var output = new FrameworkConsoleOutput();
+
+new GameRunner(rng, output).Play();

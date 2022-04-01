@@ -3,14 +3,21 @@ using Trivia.Ports;
 
 namespace Trivia
 {
-    internal class GameRunner
+    public class GameRunner
     {
-        private IRandomNumberGenerator _rng = new FrameworkRandomNumberGenerator();
+        private readonly IRandomNumberGenerator _rng;
+        private readonly IOutput _output;
         private bool _notAWinner;
+
+        public GameRunner(IRandomNumberGenerator rng, IOutput output)
+        {
+            _rng = rng;
+            _output = output;
+        }
 
         public void Play()
         {
-            var aGame = new Game();
+            var aGame = new Game(_output);
 
             aGame.Add("Chet");
             aGame.Add("Pat");

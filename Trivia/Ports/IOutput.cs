@@ -1,6 +1,6 @@
 ﻿namespace Trivia.Ports
 {
-    internal interface IOutput
+    public interface IOutput
     {
         void WriteLine(string @string);
     }

@@ -1,6 +1,6 @@
 ﻿namespace Trivia.Ports
 {
-    internal interface IRandomNumberGenerator
+    public interface IRandomNumberGenerator
     {
         int Next(int maxValue);
     }

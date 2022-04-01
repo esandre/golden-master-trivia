@@ -7,7 +7,7 @@ namespace Trivia
 {
     public class Game
     {
-        private readonly IOutput _output = new FrameworkConsoleOutput();
+        private readonly IOutput _output;
         private readonly List<string> _players = new List<string>();
 
         private readonly int[] _places = new int[6];
@@ -23,8 +23,10 @@ namespace Trivia
         private int _currentPlayer;
         private bool _isGettingOutOfPenaltyBox;
 
-        public Game()
+        public Game(IOutput output)
         {
+            _output = output;
+
             for (var i = 0; i < 50; i++)
             {
                 _popQuestions.AddLast("Pop Question " + i);

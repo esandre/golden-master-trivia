@@ -3,7 +3,7 @@ using Trivia.Ports;
 
 namespace Trivia.Implementations
 {
-    internal class FrameworkRandomNumberGenerator : IRandomNumberGenerator
+    public class FrameworkRandomNumberGenerator : IRandomNumberGenerator
     {
         private readonly Random _random = new Random();
 
